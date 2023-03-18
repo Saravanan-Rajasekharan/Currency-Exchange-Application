@@ -37,41 +37,67 @@ public class CountryCode {
     //AUD,CAD,CHF,EUR,GBP,INR,JPY,NOK,NZD,SEK,USD
 
     public double getValue(){
-        if(code.equals("AUD")){
-            return exchangeRates.getAud();
+        switch(code){
+            case "AUD":
+                return exchangeRates.getAud();
+            case "CAD":
+                return exchangeRates.getCad();
+            case "CHF":
+                return exchangeRates.getChf();
+            case "EUR":
+                return exchangeRates.getEur();
+            case "GBP":
+                return exchangeRates.getGbp();
+            case "INR":
+                return exchangeRates.getInr();
+            case "JPY":
+                return exchangeRates.getJpy();
+            case "NOK":
+                return exchangeRates.getNok();
+            case "NZD":
+                return exchangeRates.getNzd();
+            case "SEK":
+               return exchangeRates.getSek();
+            case "USD":
+                return exchangeRates.getUsd();
+            default:
+                return 0;
         }
-        if(code.equals("CAD")){
-            return exchangeRates.getCad();
-        }
-        if(code.equals("CHF")){
-            return exchangeRates.getChf();
-        }
-        if(code.equals("EUR")){
-            return exchangeRates.getEur();
-        }
-        if(code.equals("GBP")){
-            return exchangeRates.getGbp();
-        }
-        if(code.equals("INR")){
-            return exchangeRates.getInr();
-        }
-        if(code.equals("JPY")){
-            return exchangeRates.getJpy();
-        }
-        if(code.equals("NOK")){
-            return exchangeRates.getNok();
-        }
-        if(code.equals("NZD")){
-            return exchangeRates.getNzd();
-        }
-        if(code.equals("SEK")){
-            return exchangeRates.getSek();
-        }
-        if(code.equals("USD")){
-            return exchangeRates.getUsd();
-        }
-        return 0;
+//        if(code.equals("AUD")){
+//            return exchangeRates.getAud();
+//        }
+//        if(code.equals("CAD")){
+//            return exchangeRates.getCad();
+//        }
+//        if(code.equals("CHF")){
+//            return exchangeRates.getChf();
+//        }
+//        if(code.equals("EUR")){
+//            return exchangeRates.getEur();
+//        }
+//        if(code.equals("GBP")){
+//            return exchangeRates.getGbp();
+//        }
+//        if(code.equals("INR")){
+//            return exchangeRates.getInr();
+//        }
+//        if(code.equals("JPY")){
+//            return exchangeRates.getJpy();
+//        }
+//        if(code.equals("NOK")){
+//            return exchangeRates.getNok();
+//        }
+//        if(code.equals("NZD")){
+//            return exchangeRates.getNzd();
+//        }
+//        if(code.equals("SEK")){
+//            return exchangeRates.getSek();
+//        }
+//        if(code.equals("USD")){
+//            return exchangeRates.getUsd();
+//        }
     }
+
 
 
 }

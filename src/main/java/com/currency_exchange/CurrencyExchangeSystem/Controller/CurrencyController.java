@@ -8,6 +8,8 @@ import com.currency_exchange.CurrencyExchangeSystem.Service.ExchangeRateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/currency")
 public class CurrencyController {
@@ -33,6 +35,12 @@ public class CurrencyController {
     public String deleteById(@PathVariable Integer id){
         return exchangeRateService.deleteById(id);
     }
+
+    @GetMapping("/predict/{baseCurrency}/{date}")
+    public ConvertedResponseDTO predictCurrency(@PathVariable String baseCurrency, @PathVariable String date){
+        return exchangeRateService.predictCurrency(baseCurrency,date);
+    }
+
 
 
 
